@@ -1,3 +1,3 @@
 # TeX-with-R-markdown
 
-For some reason, I write down this template for those who want to learn typesetting with $\TeX$ but find it difficult to start with. In this repository, I provide a template using `R` markdown to finish the task. 
+排版一直以來是一個很麻煩的事情，無論是新聞、雜誌，乃至於學術文章，要將文章清楚、俐落且富有美感的呈現出來是需要功夫的；此外，要透過何種方式進行排版，也成為了諸多想學習排版或是已經成為排版的人而言心中曾經冒出的疑問。對此，這篇文章將會透過 R Markdown 的方式，結合些許的 $\TeX$ 語法，將個人的排版經歷與方法分享給大家。如果喜歡這篇文章的話也別忘了分享給需要的朋友喔！
