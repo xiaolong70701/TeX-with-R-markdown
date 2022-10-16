@@ -11,6 +11,8 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(reticulate)
+use_python("/opt/anaconda3/bin/python")
 ```
 
 ## \yuan{章節標題}
@@ -22,4 +24,20 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 x <- c(1:10)
 mean(x)
+```
+
+如果想要使用`python`，可以參考以下的程式碼。首先先安裝套件
+```{python, include=FALSE}
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import norm
+```
+
+再來是繪圖：
+```{python}
+# Plot between -10 and 10 with .001 steps.
+x_axis = np.arange(-10, 10, 0.001)
+# Mean = 0, SD = 2.
+plt.plot(x_axis, norm.pdf(x_axis,0,2))
+plt.show()
 ```
