@@ -1,6 +1,5 @@
 # R Markdown 與 TeX
 
-
 排版一直以來是一個很麻煩的事情，無論是新聞、雜誌，乃至於學術文章，要將文章清楚、俐落且富有美感的呈現出來是需要功夫的；此外，要透過何種方式進行排版，也成為了諸多想學習排版或是已經成為排版的人而言心中曾經冒出的疑問。對此，這篇文章將會透過 R Markdown 的方式，結合些許的 $\TeX$ 語法，將個人的排版經歷與方法分享給大家。
 
 
@@ -103,38 +102,48 @@ $$
 
 ### 中文字體設定
 
-讀者可以先下載`main.Rmd`這份檔案。下載完畢後開啟，可以看到在前言區中，多了好幾行程式碼，以下我們來一一介紹。
+讀者可以先從這份文件的[Github](https://github.com/xiaolong70701/TeX-with-R-markdown)下載`main.Rmd`這份檔案。下載完畢後開啟，可以看到在前言區中，多了好幾行程式碼，以下我們來一一介紹。
 
 ```r
+---
 title: \hei{標題}
 date: 2022-10-15
 author: 作者名字
 output:
   pdf_document:
     latex_engine: xelatex
+    includes:
+      in_header: "preamble.tex"
+---
 ```
 
 `pdf_document`後面的`latex_engine`代表我們指定要使用哪種 $\TeX$ 的編譯系統，由於我們要顯示中文，因此就必須使用`xelatex`。接著可以看到以下幾行：
 
 ```r
-header-includes:
-  ## Font Setting
-  - \usepackage{xeCJK}
-  - \usepackage{fontspec}
-  - \setmainfont[Numbers = OldStyle]{LinLibertine_R.otf} % Set the main font of the document 
-  - \setCJKmainfont[AutoFakeBold={2.5},AutoFakeSlant={0.6}]{cwTeXQMing-Medium}
-  - \setCJKfamilyfont{kai}{cwTeX Q Kai}
-  - \newcommand{\kai}[1]{{\CJKfamily{kai}#1}}
-  - \setCJKfamilyfont{yuan}{cwTeX Q Yuan Medium}
-  - \newcommand{\yuan}[1]{{\CJKfamily{yuan}#1}}
-  - \setCJKfamilyfont{hei}{cwTeX Q Hei}
-  - \newcommand{\hei}[1]{{\CJKfamily{hei}#1}
-          
-  ## Title Setting
-  - \usepackage{titlesec} % Custom section title style
-  - \titleformat{\section}{\normalfont\Large\yuan}{\thesection}{1em}{}
-  - \titleformat{\subsection}{\normalfont\large\yuan}{\thesubsection}{1em}{}
-  - \titleformat{\subsubsection}{\normalsize\yuan}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}\quad}{0em}{}
+includes:
+      in_header: "preamble.tex"
+```
+
+我們可以在 Markdown 的前言區加上`in_header: "preamble.tex"`，代表我們將`preamble.tex`這個`.tex`檔加入進來。這個檔案裡的內容如下：
+
+```tex
+% Font Setting
+\usepackage{xeCJK}
+\usepackage{fontspec}
+\setmainfont[Numbers = OldStyle]{LinLibertine_R.otf} % Set the main font of the document 
+\setCJKmainfont[AutoFakeBold={2.5},AutoFakeSlant={0.6}]{cwTeXQMing-Medium}
+\setCJKfamilyfont{kai}{cwTeX Q Kai}
+\newcommand{\kai}[1]{{\CJKfamily{kai}#1}}
+\setCJKfamilyfont{yuan}{cwTeX Q Yuan Medium} 
+\newcommand{\yuan}[1]{{\CJKfamily{yuan}#1}}
+\setCJKfamilyfont{hei}{cwTeX Q Hei}
+\newcommand{\hei}[1]{{\CJKfamily{hei}#1}}
+
+% Title Setting
+\usepackage{titlesec} % Custom section title style
+\titleformat{\section}{\normalfont\Large\yuan}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\large\yuan}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalsize\yuan}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}\quad}{0em}{}
 ```
 
 這幾行是設定字體的，`\usepackage{xeCJK}`這行必須加入，否則剛剛使用的`latex_engine: xelatex`就沒有用了，`\usepackage{fontspec}`則是將中、英字體分開設定。後面的`\setmainfont`與`setCJKmainfont`顧名思義就是設定主要字體與主要「中文」字體，可以看到設定字體前我們加上了`[Numbers = OldStyle]`，代表將字體設定成 OldStyle 的格式，顯示結果如下：
@@ -157,4 +166,3 @@ header-includes:
 ## 小結
 
 排版是需要學習與時間培養的，作者本人也是透過做中學、學中做的方式慢慢建立排版的直覺。因此，學習在每份文件都使用排版軟體排版吧！如果喜歡這篇文章的話也別忘了分享給需要的朋友喔。
-
