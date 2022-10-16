@@ -1,9 +1,36 @@
-# TeX-with-R-markdown
+---
+disqus: yueswater
+---
+
+# R Markdown 與 TeX
+
+###### tags: `R Language`
+
+{%hackmd @themes/orangeheart %}
+<style>
+.likecoin-button {
+  position: relative;
+  width: 100%;
+  max-width: 485px;
+  max-height: 240px;
+  margin: 0 auto;
+}
+.likecoin-button > div {
+  padding-top: 49.48454%;
+}
+.likecoin-button > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+</style>
 
 排版一直以來是一個很麻煩的事情，無論是新聞、雜誌，乃至於學術文章，要將文章清楚、俐落且富有美感的呈現出來是需要功夫的；此外，要透過何種方式進行排版，也成為了諸多想學習排版或是已經成為排版的人而言心中曾經冒出的疑問。對此，這篇文章將會透過 R Markdown 的方式，結合些許的 $\TeX$ 語法，將個人的排版經歷與方法分享給大家。
 
 
-## 在 `R` 語言中新增 Markdown 檔案
+## 在 R 語言中新增 Markdown 檔案
 
 我們在此預設讀者的電腦中均已安裝 `R` 語言與 R Studio。
 
@@ -43,8 +70,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ![](https://i.imgur.com/4eEEOJM.jpg)
 
+關於 Markdown 語法的相關內容，請參考[MarkDown語法大全](https://hackmd.io/@eMP9zQQ0Qt6I8Uqp2Vqy6w/SyiOheL5N/%2FBVqowKshRH246Q7UDyodFA?type=book)。
 
-## $\TeX$ 語法設定
+## TeX 語法設定
 
 進行$\TeX$ 語法有兩個目的。如果有聽過 $\TeX$ 的人應該知道 $\TeX$ 是用於進行數學排版的語言，而 $\TeX$ 可以應用在 R Markdown 中，讓文件變得更簡潔、漂亮。另一方面，由於有些文件必須以中文呈現，因此必須透過 $\TeX$ 語法的相關設定，才能顯示中文於文件中。
 
@@ -155,3 +183,8 @@ header-includes:
 ## 小結
 
 排版是需要學習與時間培養的，作者本人也是透過做中學、學中做的方式慢慢建立排版的直覺。因此，學習在每份文件都使用排版軟體排版吧！如果喜歡這篇文章的話也別忘了分享給需要的朋友喔。
+
+<div class="likecoin-embed likecoin-button">
+  <div></div>
+  <iframe scrolling="no" frameborder="0" src="https://button.like.co/in/embed/xiaolong70701/button?referrer=hackmd.io"></iframe>
+</div>
