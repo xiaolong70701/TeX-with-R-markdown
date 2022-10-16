@@ -1,31 +1,5 @@
----
-disqus: yueswater
----
-
 # R Markdown 與 TeX
 
-###### tags: `R Language`
-
-{%hackmd @themes/orangeheart %}
-<style>
-.likecoin-button {
-  position: relative;
-  width: 100%;
-  max-width: 485px;
-  max-height: 240px;
-  margin: 0 auto;
-}
-.likecoin-button > div {
-  padding-top: 49.48454%;
-}
-.likecoin-button > iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-</style>
 
 排版一直以來是一個很麻煩的事情，無論是新聞、雜誌，乃至於學術文章，要將文章清楚、俐落且富有美感的呈現出來是需要功夫的；此外，要透過何種方式進行排版，也成為了諸多想學習排版或是已經成為排版的人而言心中曾經冒出的疑問。對此，這篇文章將會透過 R Markdown 的方式，結合些許的 $\TeX$ 語法，將個人的排版經歷與方法分享給大家。
 
@@ -184,7 +158,3 @@ header-includes:
 
 排版是需要學習與時間培養的，作者本人也是透過做中學、學中做的方式慢慢建立排版的直覺。因此，學習在每份文件都使用排版軟體排版吧！如果喜歡這篇文章的話也別忘了分享給需要的朋友喔。
 
-<div class="likecoin-embed likecoin-button">
-  <div></div>
-  <iframe scrolling="no" frameborder="0" src="https://button.like.co/in/embed/xiaolong70701/button?referrer=hackmd.io"></iframe>
-</div>
