@@ -145,7 +145,7 @@ header-includes:
   - \setCJKfamilyfont{kai}{cwTeX Q Kai}
   - \newcommand{\kai}[1]{{\CJKfamily{kai}#1}}
 ```
-第一行代表我們在中文字體家族中設定一個名為`cwTeX Q Kai`的字體，接著新建一個指定叫做`\kai`，方便我們日後如果要更改文字的字型，可以使用`\kai{想要更改的文字}`進行更換。最後，必須注意，這些字體都必須是已經安裝在讀者端的電腦上，如果想要下載由吳聰敏老師開發的`cwTeX`系列字體，可以參考[這篇](https://github.com/l10n-tw/cwtex-q-fonts)。
+第一行代表我們在中文字體家族中設定一個名為`cwTeX Q Kai`的字體，接著新建一個指定叫做`\kai`，方便我們日後如果要更改文字的字型，可以使用`\kai{想要更改的文字}`進行更換。最後，必須注意，這些字體都必須是已經安裝在讀者端的電腦上，如果想要下載由吳聰敏老師開發的`cwTeX`系列字體，可以參考[這篇](https://github.com/l10n-tw/cwtex-q-fonts)。而後面的`\usepackage{titlesec}`則是設定不同深度的標題之格式，包含字體、大小、標題開頭數字之計算方式。
 
 ## 小結
 
