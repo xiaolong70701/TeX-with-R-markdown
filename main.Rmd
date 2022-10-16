@@ -5,25 +5,8 @@ author: 作者名字
 output:
   pdf_document:
     latex_engine: xelatex
-
-header-includes:
-  ## Font Setting
-  - \usepackage{xeCJK}
-  - \usepackage{fontspec}
-  - \setmainfont[Numbers = OldStyle]{LinLibertine_R.otf} % Set the main font of the document 
-  - \setCJKmainfont[AutoFakeBold={2.5},AutoFakeSlant={0.6}]{cwTeXQMing-Medium}
-  - \setCJKfamilyfont{kai}{cwTeX Q Kai}
-  - \newcommand{\kai}[1]{{\CJKfamily{kai}#1}}
-  - \setCJKfamilyfont{yuan}{cwTeX Q Yuan Medium} 
-  - \newcommand{\yuan}[1]{{\CJKfamily{yuan}#1}}
-  - \setCJKfamilyfont{hei}{cwTeX Q Hei}
-  - \newcommand{\hei}[1]{{\CJKfamily{hei}#1}}
-  
-  ## Title Setting
-  - \usepackage{titlesec} % Custom section title style
-  - \titleformat{\section}{\normalfont\Large\yuan}{\thesection}{1em}{}
-  - \titleformat{\subsection}{\normalfont\large\yuan}{\thesubsection}{1em}{}
-  - \titleformat{\subsubsection}{\normalsize\yuan}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}\quad}{0em}{}
+    includes:
+      in_header: "preamble.tex"
 ---
 
 ```{r setup, include=FALSE}
